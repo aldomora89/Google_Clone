@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Box from './components/Box/Box';
+//import Box from './components/Box/Box';
 import reportWebVitals from './reportWebVitals';
-import Google from './components/Google/Google';
+//import Google from './components/Google/Google';
+import reducer, { initialState } from "./components/API/reducer";
+import { StateProvider } from "./components/API/StateProvider";
 
 ReactDOM.render(
   <React.StrictMode>
+    <StateProvider initialState={initialState} reducer={reducer}>
     <App/>
+    </StateProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -62,3 +62,7 @@
       height: 20px;
     }
   }
+
+  .search__buttonsHidden {
+    display: none !important;
+    }
